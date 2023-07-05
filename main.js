@@ -1,24 +1,34 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { getWeather, getForecast } from "./weather-module.js"
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const container = document.getElementById("main-container");
+const form = document.querySelector("form")
 
-setupCounter(document.querySelector('#counter'))
+
+form.addEventListener("submit", function (e) {
+	const userInput = document.getElementById("user-input");
+
+	e.preventDefault()
+	
+	let weatherLocationCall = userInput.value
+	console.log(weatherLocationCall)
+
+	getWeather(weatherLocationCall)
+		.then(weather => {
+			console.log(weather)
+		})
+})
+
+
+
+
+
+// let weatherLocationCall = "sydney"
+
+// let currentWeather = await getWeather(weatherLocationCall)
+// let forecast = await getForecast(weatherLocationCall)
+// let location = currentWeather.location.name;
+// let region = currentWeather.location.region;
+// let tempC = currentWeather.current.temp_c;
+// let tempF = currentWeather.current.temp_f;
+
+// console.log(tempC)
