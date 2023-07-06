@@ -19,26 +19,53 @@ body {
 header {
     grid-area: header;
     background-color: aliceblue;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    font-weight: bold;
+    font-size: 2.5rem;
 }
 
 #scroller-bar {
     grid-area: scroller;
+    background-color: aquamarine;
 }
 
 #sidebar {
     grid-area: sidebar;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    background-color: burlywood;
 }
 
-header, #scroller-bar {
+#scroller-bar {
     display: grid;
     place-items: center;
 }
 
 #main-container {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: solid blue 1px;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }

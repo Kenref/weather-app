@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header>Weather app</header>
+    <header>
+		<h2>Weather app</h2>
+	<form action="">
+		<input type="text" id="user-input" name="user-input">
+		<input type="submit" value="submit">
+	</form>
+	</header>
 	<div id="scroller-bar">the weather conditions will be scrolling to the left here</div>
 	
 	<div id="sidebar">container future forecast</div>
 	<div id="main-container">
-		<form action="">
-			<label for="user-input">Enter Location:</label>
-			<input type="text" id="user-input" name="user-input">
-			<input type="submit" value="submit">
-		</form>
+		<div id="results">
+			<h1 id="location">Location</h1>
+			<h3 id="condition">condition</h3>
+			<img src="#" alt="weather icon" id="icon">
+			<p>Low:<span id="min"></span></p>
+			<p>High:<span id="max"></span></p>
+			<p>Rain: <span id="rain"></span></p>
+		</div>
 	</div>
 
 
