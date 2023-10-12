@@ -21,3 +21,4 @@
 
 <h2>Screenshot</h2>
 
+![image](https://github.com/Kenref/weather-app/assets/107287396/6531a12d-5174-4f3a-9a98-4fe4f506bd7d)
