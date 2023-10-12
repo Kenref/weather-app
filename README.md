@@ -7,7 +7,7 @@
 </ul>
 <br>
 <h2>Languages:</h2>
-<img src="https://skillicons.dev/icons?i=js,html,css">
+<img src="https://skillicons.dev/icons?i=js,html,css" alt="JS, HTML and CSS icons">
 
 <br>
 <h2>Challenges</h2>
